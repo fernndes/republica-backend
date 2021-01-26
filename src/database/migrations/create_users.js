@@ -1,4 +1,4 @@
-const db = require("./config")
+const db = require("../connection")
 
 async function createTable() {
     await db.connect()
