@@ -19,6 +19,8 @@ async function createTable() {
 	})
 
     await db.end()
+
+    return response.status(204).send();
 }
 
 createTable();
