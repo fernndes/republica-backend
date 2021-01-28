@@ -13,7 +13,7 @@ module.exports = {
         } finally {
             // Make sure to release the client before any error handling,
             // just in case the error handling itself throws an error.
-            client.release()
+            connection.release()
           }
     }
 }
