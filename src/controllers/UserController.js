@@ -19,6 +19,6 @@ module.exports = {
 
 		await connection.end();
 
-		return response.status(20).send();
+		return response.status(204).send();
 	}
 }
