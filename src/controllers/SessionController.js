@@ -21,9 +21,9 @@ module.exports = {
 
 			
         });
-
-        res.send(user);
         
-        return 
+        
+        
+        return res.json({user: user});
     }
 }
