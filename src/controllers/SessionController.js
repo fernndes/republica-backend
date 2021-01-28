@@ -13,11 +13,13 @@ module.exports = {
 			if (err) {
                 console.log(err);
                 res.status(400).json({ error: "No USER found with this ID" });
+                connection.end();	
 			 } else {
-			 	console.log("Works...");
+                 console.log("Works...");
+                 connection.end();	
 			  }
 
-			connection.end();	
+			
         });
         
         return res.json(user);
