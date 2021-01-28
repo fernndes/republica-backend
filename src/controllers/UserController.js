@@ -22,7 +22,7 @@ module.exports = {
 		await connection.end();
 
 		console.log("Passou")
-		
-		return ;
+
+		return res.end();
 	}
 }
