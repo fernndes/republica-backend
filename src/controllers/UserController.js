@@ -2,7 +2,7 @@ const generateUniqueId = require('../utils/generateUniqueId');
 const connection = require('../database/connection');
 
 module.exports = {
-	async create(req, res) {
+	async create(req, res, next) {
 		const { name, email, whatsapp, city, uf, key } = req.body;
 
 		const id = generateUniqueId(key);
@@ -19,6 +19,8 @@ module.exports = {
 
 		await connection.end();
 
-		return res.send(401);
+		res.status(204).send();
+
+		return next(new Error([error]));
 	}
 }
