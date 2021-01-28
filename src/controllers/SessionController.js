@@ -14,7 +14,7 @@ module.exports = {
                 connection.end();	
 			 } else {
                  console.log("Works...");
-                 console.log(response.rows[0])
+                 response.rows[0]
                  connection.end();	
 			  }
 
