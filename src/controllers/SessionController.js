@@ -9,11 +9,11 @@ module.exports = {
 
         try {
             var user = await connection.query('SELECT * FROM users WHERE id = $1', [key]);
-            return res.json({user: user.rows[0]});
-        } finally {
-            // Make sure to release the client before any error handling,
-            // just in case the error handling itself throws an error.
-            connection.end()
-          }
+            res.json({user: user.rows[0]});
+            return connection.end();
+        } catch(err) {
+            res.send(err);
+            return connection.end();
+        }
     }
 }
