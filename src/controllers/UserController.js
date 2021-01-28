@@ -19,6 +19,6 @@ module.exports = {
 			connection.end();	
 		});
 
-		return res.end();
+		return res.send({id});
 	}
 }
