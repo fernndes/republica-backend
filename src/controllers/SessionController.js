@@ -22,8 +22,8 @@ module.exports = {
 			
         });
 
-        res.send("Ok")
+        res.send(user);
         
-        return res.send(user);
+        return 
     }
 }
