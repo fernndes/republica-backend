@@ -9,9 +9,9 @@ module.exports = {
 
 		const id = generateUniqueId(key);
 
-		await connection.open();
+		await connection.connect();
 
-		await connection.query('INSERT INTO users(id, name, email, whatsapp, city, uf) values($1, $2, $3, $4, $5, $6)', [id, name, email, whatsapp, city, uf], (err, res) => {
+		await connection.query('INSERT INTO users(id, name, email, whatsapp, city, uf) VALUES ($1, $2, $3, $4, $5, $6)', [id, name, email, whatsapp, city, uf], (err, res) => {
 			if (err) {
 	    		console.log(err);
 			 } else {
