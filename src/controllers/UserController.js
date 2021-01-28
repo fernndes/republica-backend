@@ -15,11 +15,9 @@ module.exports = {
 			 } else {
 			 	console.log("Works...");
 			  }
+
+			connection.end();	
 		});
-
-		console.log("Aqui")
-
-		await connection.end();
 
 		console.log("Passou")
 
