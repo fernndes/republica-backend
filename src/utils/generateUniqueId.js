@@ -6,4 +6,5 @@ function generateUniqueId(key) {
 	return hash
 }
 
-module.exports = generateUniqueId;
+
+module.exports = { generateUniqueId };

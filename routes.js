@@ -2,6 +2,7 @@ const express = require('express');
 const { celebrate, Segments, Joi } = require('celebrate');
 
 const UserController = require('./src/controllers/UserController');
+const SessionController = require('./src/controllers/SessionController');
 
 const routes = express.Router();
 
@@ -15,5 +16,7 @@ routes.post('/users', celebrate({
         uf: Joi.string().required().length(2)
 	})
 }), UserController.create);
+
+routes.post('/sessions', SessionController.create);
 
 module.exports = routes;
