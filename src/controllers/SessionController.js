@@ -16,10 +16,8 @@ module.exports = {
                 connection.end();	
 			 } else {
                  console.log("Works...");
-                 
+                 console.log(res.rows[0]);
                  connection.end();	
-
-                 return res.rows[0]
 			  }
 
 			
