@@ -17,9 +17,12 @@ module.exports = {
 			  }
 		});
 
+		console.log("Aqui")
+
 		await connection.end();
 
-		res.send('OK');
+		console.log("Passou")
+		
 		return ;
 	}
 }
