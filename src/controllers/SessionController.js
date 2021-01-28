@@ -14,7 +14,6 @@ module.exports = {
                 connection.end();	
 			 } else {
                  console.log("Works...");
-                 response.rows[0]
                  connection.end();	
 			  }
 
@@ -23,6 +22,6 @@ module.exports = {
         
         
         
-        return res.json({user: user});
+        return res.json({user: user.rows[0]});
     }
 }
