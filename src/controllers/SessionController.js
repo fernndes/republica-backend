@@ -22,6 +22,6 @@ module.exports = {
 			
         });
         
-        return res.json({user});
+        return res.send(user);
     }
 }
