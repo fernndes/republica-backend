@@ -9,10 +9,10 @@ module.exports = {
 
         await connection.connect();
 
-		var user = await connection.query('SELECT FIRST(name) FROM users WHERE id = $1', [id], (err, res) => {
+		var user = await connection.query('SELECT name FROM users WHERE id = $1', [id], (err, res) => {
 			if (err) {
                 console.log(err);
-                res.status(400).json({ error: "No USER found with this ID" });
+                res.json({ error: "No USER found with this ID" });
                 connection.end();	
 			 } else {
                  console.log("Works...");
