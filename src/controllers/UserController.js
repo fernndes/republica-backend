@@ -18,5 +18,7 @@ module.exports = {
 		});
 
 		await connection.end();
+
+		break;
 	}
 }
