@@ -19,8 +19,6 @@ module.exports = {
 			connection.end();	
 		});
 
-		console.log("Passou")
-
 		return res.end();
 	}
 }
