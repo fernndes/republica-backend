@@ -5,11 +5,9 @@ module.exports = {
     async create(req, res) {
         const { key } = req.body;
 
-        var id = generateUniqueId(key);
-
         await connection.connect();
 
-		var user = await connection.query('SELECT name FROM users WHERE id = $1', [id], (err, response) => {
+		var user = await connection.query('SELECT name FROM users WHERE id = $1', [key], (err, response) => {
 			if (err) {
                 console.log(err);
                 res.json({ error: "No USER found with this ID" });
