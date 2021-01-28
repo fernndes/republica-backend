@@ -19,8 +19,6 @@ module.exports = {
 
 		await connection.end();
 
-		res.status(204).send();
-
-		return next(new Error([error]));
+		res.end();
 	}
 }
