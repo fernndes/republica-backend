@@ -3,7 +3,7 @@ const connection = require('../database/connection');
 
 module.exports = {
     async create(req, res) {
-        const { key } = req.body;
+        const { key } = JSON.parse(req.body);
 
         await connection.connect();
 

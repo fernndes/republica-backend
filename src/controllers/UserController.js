@@ -3,7 +3,7 @@ const connection = require('../database/connection');
 
 module.exports = {
 	async create(req, res, next) {
-		const { name, email, whatsapp, city, uf, key } = req.body;
+		const { name, email, whatsapp, city, uf, key } = JSON.parse(req.body);
 
 		const id = generateUniqueId(key);
 
