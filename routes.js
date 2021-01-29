@@ -4,7 +4,7 @@ const { celebrate, Segments, Joi } = require('celebrate');
 const UserController = require('./src/controllers/UserController');
 const SessionController = require('./src/controllers/SessionController');
 const HomeController = require('./src/controllers/HomeController');
-const ProfileController = require('./src/controllers ProfileController');
+const ProfileController = require('./src/controllers/ProfileController');
 
 const routes = express.Router();
 
