@@ -2,7 +2,7 @@ const connection = require('../database/connection');
 
 module.exports = {
 	async create(req, res, next) {
-        const { city, uf, address, description, title } = JSON.parse(req.body);
+        const { city, uf, address, description, title } = req.body;
         const user_id = req.headers.authorization;
 
         await connection.connect();
