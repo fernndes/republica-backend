@@ -26,6 +26,6 @@ routes.get('/profile', celebrate({
     [Segments.HEADERS] : Joi.object({
         Authorization: Joi.string().required()
     }).unknown()
-}), ProfileController.index);
+}) , ProfileController.index)
 
 module.exports = routes;
