@@ -9,7 +9,7 @@ module.exports = {
         await connection.connect();
 
         try {
-            await connection.query('SELECT * FROM home WHERE id = $1', [user_id], (err, response) => {
+            await connection.query('SELECT * FROM home WHERE user_id = $1', [user_id], (err, response) => {
                 return res.json({home: response.rows[0]});
             });
             
