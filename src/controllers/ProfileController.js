@@ -7,12 +7,13 @@ module.exports = {
         await connection.connect();
 
         try {
-            var home = await connection.query('SELECT * FROM home WHERE id = $1', [user_id]);
-            res.json({home: home.rows[0]});
-            return connection.end();
-        } catch(err) {
-            res.send(err);
-            return connection.end();
+            var home = await connection.query('SELECT * FROM home WHERE id = $1', [user_id], (err, res) => {
+                await connection.end();
+                return res.json({home: home.rows[0]});
+            });
+            
+        } catch(err) {            
+            return res.send(err);
         }
     }
 }

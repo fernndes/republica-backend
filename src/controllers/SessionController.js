@@ -8,12 +8,13 @@ module.exports = {
         await connection.connect();
 
         try {
-            var user = await connection.query('SELECT name FROM users WHERE id = $1', [key]);
-            res.json({user: user.rows[0]});
-            return connection.end();
-        } catch(err) {
-            res.send(err);
-            return connection.end();
+            var user = await connection.query('SELECT name FROM users WHERE id = $1', [key], (err, res) => {
+            await connection.end();
+            return res.json({user: user.rows[0]});                
+            })
+            
+        } catch(err) {           
+            return res.send(err);
         }
     }
 }

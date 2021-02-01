@@ -16,7 +16,7 @@ module.exports = {
 			 	console.log("Works...");
 			  }
 
-			connection.end();	
+			await connection.end();	
 		});
 
 		return res.send({id});
