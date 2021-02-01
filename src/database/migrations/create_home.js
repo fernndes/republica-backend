@@ -4,7 +4,7 @@ async function createTable() {
     await db.connect()
 
     await db.query(`CREATE TABLE home(
-        id int NOT NULL AUTO_INCREMENT,
+        id SERIAL NOT NULL ,
         user_id VARCHAR(255) NOT NULL,
         title VARCHAR(255) NOT NULL,
         description VARCHAR(255) NOT NULL,
