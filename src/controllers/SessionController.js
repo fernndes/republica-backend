@@ -5,12 +5,10 @@ module.exports = {
     async create(req, res) {
         const { key } = req.body;
 
-        const id = key;
-
         await connection.connect();
 
         try {
-            var user = await connection.query('SELECT name FROM users WHERE id = $1', [id]);
+            var user = await connection.query('SELECT name FROM users WHERE id = $1', [key]);
             res.json({user: user.rows[0]});
             return connection.end();
         } catch(err) {
