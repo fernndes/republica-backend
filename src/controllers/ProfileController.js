@@ -4,6 +4,8 @@ module.exports = {
     async index(req, res) {
         const user_id = req.headers.authorization;
 
+        console.log("Teste ===>", user_id);
+
         await connection.connect();
 
         try {
