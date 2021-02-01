@@ -22,10 +22,6 @@ routes.post('/sessions', SessionController.create);
 
 routes.post('/home', HomeController.create);
 
-routes.get('/profile', celebrate({
-    [Segments.HEADERS] : Joi.object({
-        Authorization: Joi.string().required()
-    }).unknown()
-}) , ProfileController.index)
+routes.get('/profile', ProfileController.index)
 
 module.exports = routes;
