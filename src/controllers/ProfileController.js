@@ -2,7 +2,7 @@ const connection = require('../database/connection');
 
 module.exports = {
     async index(req, res) {
-        const user_id = req.headers.Authorization;
+        const user_id = req.headers.authorization;
 
         console.log("Teste ===>", user_id);
 
