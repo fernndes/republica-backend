@@ -9,7 +9,7 @@ module.exports = {
         
         try {
             await connection.query('INSERT INTO home(city, uf, address, description, title, user_id) VALUES ($1, $2, $3, $4, $5, $6)', [city, uf, address, description, title, user_id])
-            await connection.end();            
+            connection.end();            
             return res.send('Success');
         } catch (error) {
             return res.send(error);
