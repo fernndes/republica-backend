@@ -14,9 +14,7 @@ module.exports = {
 	    		console.log(err);
 			 } else {
 			 	console.log("Works...");
-			  }
-
-			connection.end();	
+			  }	
 		});
 
 		return res.send({id});

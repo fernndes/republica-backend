@@ -9,7 +9,6 @@ module.exports = {
 
         try {
             await connection.query('SELECT name FROM users WHERE id = $1', [key], (err, response) => {
-            connection.end();
             return res.json({user: response.rows[0]});                
             })
             
