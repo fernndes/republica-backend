@@ -4,13 +4,11 @@ module.exports = {
     async index(req, res) {
         const user_id = req.headers.authorization;
 
-        console.log("Teste ===>", user_id);
-
         await connection.connect();
 
         try {
             await connection.query('SELECT * FROM home WHERE user_id = $1', [user_id], (err, response) => {
-                return res.json({home: response.rows[0]});
+                return res.json({home: response.rows});
             });
             
         } catch(err) {            
