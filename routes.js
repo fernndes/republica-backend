@@ -24,7 +24,7 @@ routes.post('/home', HomeController.create);
 
 routes.get('/profile', celebrate({
     [Segments.HEADERS] : Joi.object({
-        Authorization: Joi.string().required()
+        Authorization: Joi.required()
     }).unknown()
 }), ProfileController.index);
 
