@@ -5,7 +5,7 @@ module.exports = {
         const { city, uf, address, description, title } = req.body;
         const user_id = req.headers.authorization;
 
-        console.log(user_id);
+        console.log("Teste ===>", user_id);
 
         await connection.connect();
         
