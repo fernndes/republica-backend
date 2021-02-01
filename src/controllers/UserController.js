@@ -5,7 +5,7 @@ module.exports = {
 	async create(req, res, next) {
 		const { name, email, whatsapp, city, uf } = req.body;
 
-		const id = generateUniqueId(key);
+		const id = generateUniqueId();
 
 		await connection.connect();
 
