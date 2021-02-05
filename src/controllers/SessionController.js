@@ -27,7 +27,7 @@ module.exports = {
                 if (err) {
                     return console.error('error running query', err);
                 }
-                return res.json({user: response.rows[0]});
+                return res.json({user: result.rows[0]});
             });
         });
 
