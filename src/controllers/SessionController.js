@@ -5,7 +5,7 @@ module.exports = {
     async create(req, res) {
         const { key } = req.body;
 
-        await connection.connect();
+        // await connection.connect();
 
         // try {
         //     await connection.query('SELECT name FROM users WHERE id = $1', [key], (err, response) => {
