@@ -30,7 +30,7 @@ module.exports = {
                 if (err) {
                     return console.error('error running query', err);
                 }
-                return res.send('Success');
+                return res.send({id});
             });
         });
 	}
